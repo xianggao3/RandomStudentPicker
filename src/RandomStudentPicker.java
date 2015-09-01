@@ -75,7 +75,7 @@ public class RandomStudentPicker extends Application {
 		    @Override
 		    protected Void call() throws Exception {
 			for (int i = 0; i < 15; i++) {
-			    String student = students.get(0);
+			    String student = pickRandomStudent();
 
 			    // THIS WILL BE DONE ASYNCHRONOUSLY VIA MULTITHREADING
 			    Platform.runLater(new Runnable() {
@@ -87,7 +87,7 @@ public class RandomStudentPicker extends Application {
 
 			    // SLEEP EACH FRAME
 			    try {
-				Thread.sleep(0);
+				Thread.sleep(100);
 			    } catch (InterruptedException ie) {
 				ie.printStackTrace();
 			    }
